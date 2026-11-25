@@ -11,10 +11,10 @@
 **Zenodo dataset DOI:** 10.5281/zenodo.22232373  
 **Zenodo archival URL:** https://doi.org/10.5281/zenodo.22232373
 
-The same versioned, data-only release package is intended for both GitHub and
-Zenodo. The Zenodo DOI has been assigned to the archival record; a reserved
-DOI becomes resolvable only after that record is published. The first public
-release date above refers to the dataset release, not the historical source
+This versioned, data-only package is the common release package for GitHub
+and Zenodo. Use the Zenodo DOI as the archival identifier and the GitHub
+repository for versioned access to the same files. The first public release
+date above refers to the dataset release, not the historical source
 snapshots or dataset-construction date.
 
 ---
@@ -127,7 +127,7 @@ HybPriCare-QJM/
 ### Getting started
 
 Download the GitHub repository using **Code > Download ZIP**, or download the
-dataset archive from the Zenodo record once it is published. For reproducible
+dataset files from the Zenodo record. For reproducible
 reuse, select the versioned `v1.0` GitHub release/tag or the corresponding
 Zenodo version rather than relying on a changing default branch.
 
@@ -868,7 +868,7 @@ d^R(a,b)
 =
 s_a
 +
-\operatorname{dist}_G(v(a),v(b))
+\mathrm{dist}_G(v(a),v(b))
 +
 s_b,
 ```
@@ -876,7 +876,7 @@ s_b,
 where:
 
 ```math
-\operatorname{dist}_G(v(a),v(b))
+\mathrm{dist}_G(v(a),v(b))
 ```
 
 is the shortest-path distance between the corresponding road-network nodes.
@@ -1195,19 +1195,15 @@ Future corrections or extensions should be released under a new version number r
 
 ## 21. Citation
 
-If you use HybPriCare-QJM in academic research, cite the dataset version used.
-Until the Zenodo archival record is published, cite the GitHub release:
+If you use HybPriCare-QJM in academic research, cite the dataset version used
+with its Zenodo DOI. In studies using the GitHub copy, also identify the
+release tag or commit identifier.
 
-> Atta, S. (2026). *HybPriCare-QJM v1.0: An Integrated Geospatial Dataset for Hybrid Primary-Care Network Design and Digital Vulnerability Analysis* [Data set]. GitHub. https://github.com/SoumenAtta/HybPriCare-QJM
-
-Include the release tag or commit identifier in studies using the GitHub
-copy. After the Zenodo record is published, use the archival citation below.
-
-### Zenodo archival citation (after publication)
+### Zenodo archival citation
 
 > Atta, S. (2026). *HybPriCare-QJM v1.0: An Integrated Geospatial Dataset for Hybrid Primary-Care Network Design and Digital Vulnerability Analysis*. Zenodo. https://doi.org/10.5281/zenodo.22232373
 
-### Zenodo BibTeX (after publication)
+### BibTeX
 
 ```bibtex
 @dataset{atta2026hybpricare,

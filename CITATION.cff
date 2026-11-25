@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite HybPriCare-QJM v1.0. The Zenodo DOI resolves after the archival record is published; until then, cite the GitHub release as explained in README.md."
+message: "Please cite HybPriCare-QJM v1.0 using its Zenodo DOI. Citation details are provided in README.md."
 title: "HybPriCare-QJM v1.0: An Integrated Geospatial Dataset for Hybrid Primary-Care Network Design and Digital Vulnerability Analysis"
 type: dataset
 authors:
