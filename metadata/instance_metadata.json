@@ -1,0 +1,92 @@
+{
+  "dataset_name": "HybPriCare-QJM",
+  "dataset_title": "HybPriCare-QJM v1.0: An Integrated Geospatial Dataset for Hybrid Primary-Care Network Design and Digital Vulnerability Analysis",
+  "dataset_version": "1.0",
+  "build_timestamp_utc": "2026-08-07T18:48:18.380313+00:00",
+  "study_icb_code": "QJM",
+  "study_ons_icb_code": "E54000013",
+  "study_icb_name": "NHS Lincolnshire Integrated Care Board",
+  "primary_distance": "road_distance_km",
+  "coordinate_reference_systems": {
+    "projected_coordinates": {
+      "columns": [
+        "easting",
+        "northing"
+      ],
+      "name": "British National Grid",
+      "epsg": 27700,
+      "unit": "metre"
+    },
+    "geographic_coordinates": {
+      "columns": [
+        "latitude",
+        "longitude"
+      ],
+      "name": "WGS84",
+      "epsg": 4326,
+      "unit": "decimal degree"
+    }
+  },
+  "distance_units": {
+    "road_distance_km": "kilometre",
+    "euclidean_distance_km": "kilometre",
+    "distance_km": "kilometre",
+    "demand_snap_m": "metre",
+    "gp_snap_m": "metre",
+    "hub_snap_m": "metre",
+    "snap_distance_m": "metre"
+  },
+  "digital_vulnerability_index": {
+    "definition": "Equal-weight composite of nationally scaled area-level vulnerability components; not a population exclusion fraction.",
+    "national_reference": "England 2021 LSOAs",
+    "weights": {
+      "connectivity": 0.25,
+      "income": 0.25,
+      "adult_skills": 0.25,
+      "older_share": 0.25
+    },
+    "connectivity_scaling": "zero_preserving_positive_percentile",
+    "income_scaling": "national_percentile",
+    "adult_skills_scaling": "reverse_national_rank",
+    "older_share_scaling": "national_percentile",
+    "percentile_rank_convention": {
+      "tie_method": "average ranks",
+      "software_equivalent": "pandas rank(method=\"average\")",
+      "income_and_older_share_scaling": "(rank_average - 1) / (N - 1), over all English 2021 LSOAs",
+      "connectivity_scaling": "zero values fixed at 0; positive values scaled as rank_average / n_positive among positive-risk English LSOAs"
+    }
+  },
+  "pharmacy_site_rule": "NHSBSA records with PHARMACY_TYPE=PHARMACY were retained for NHS Lincolnshire ICB after excluding private and distance-selling contractors; seven out-of-hours source records were retained and all eligible records were collapsed to one candidate site per geocoded coordinate pair.",
+  "public_identifier_policy": "GP practice names, source contractor names, and source contractor codes are omitted from the public facility tables. Stable gp_id and author-created hub_id values support joins to the deposited distance matrices; source_record_count preserves candidate-location consolidation information.",
+  "road_distance": {
+    "enabled": true,
+    "bbox_buffer_km": 40,
+    "raw_cache": "os_open_roads_qjm_202604_buffer40km.csv.gz",
+    "expected_spatial_link_count": 404625,
+    "cached_link_count": 404625,
+    "object_id_completeness": true,
+    "bbox_epsg": 27700,
+    "bbox": [
+      440435.0,
+      266948.7422,
+      596787.2478,
+      449881.9219
+    ],
+    "road_links_input": 404625,
+    "road_links_usable": 402387,
+    "road_components": 231,
+    "road_nodes_all_components": 346460,
+    "largest_component_nodes": 345332,
+    "largest_component_share": 0.9967442128961497,
+    "routing_nodes": 345332,
+    "routing_edges": 396068,
+    "endpoint_tolerance_m": 0.1,
+    "largest_component_only": true,
+    "road_links": 404625,
+    "road_nodes": 345332,
+    "unique_target_road_nodes": 167,
+    "unique_demand_road_nodes": 435
+  },
+  "qa_passed": true,
+  "qa_problems": []
+}
